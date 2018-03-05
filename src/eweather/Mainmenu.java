@@ -41,7 +41,7 @@ public class Mainmenu extends javax.swing.JFrame {
 
         jButton3.setText("jButton3");
 
-        jButton4.setText("jButton4");
+        jButton4.setText("EXIT");
 
         jLabel1.setText("eWeather");
 
