@@ -10,11 +10,11 @@ import java.io.InputStream;
 import java.net.URL; 
 import javax.json.*;
 import javax.json.stream.JsonParser;
-
-
-
-
-
+import model.*;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 /*
  * @author George Siorokos <georgios.siorokos at gmail.com>
  */
@@ -32,12 +32,12 @@ public class Eweather {
           JsonParser.Event e = parser.next();
           if (e == JsonParser.Event.KEY_NAME) {
               switch (parser.getString()) {
-                  case "temp":
+                  case "message":
                       parser.next();
                     System.out.print(parser.getString());
                     System.out.print(": ");
                     break;
-                case "message":
+                case "temp":
                     parser.next();
                     System.out.println(parser.getString());
                     System.out.println("---------");
