@@ -13,6 +13,7 @@ public class OkairosTora extends javax.swing.JFrame {
 
     /**
      * Creates new form OkairosTora
+ 
      */
     public OkairosTora() {
         initComponents();
@@ -46,6 +47,11 @@ public class OkairosTora extends javax.swing.JFrame {
         jButton2.setText("Αναννέωση καιρού");
 
         jButton3.setText("Επιστροφή");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cityList1, jList2);
         jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create("${cityname}"));
@@ -86,6 +92,12 @@ public class OkairosTora extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        this.dispose();
+        new Mainmenu.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
