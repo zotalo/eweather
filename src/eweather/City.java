@@ -20,12 +20,21 @@ public class City {
     
     
     public City(){
-        weathers=new ArrayList<Weather>();
+        weathers=new ArrayList<>();
         
     }
     public void addWeather(Weather w){
         weathers.add(w);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public int getId(){
         return id;
     }  
