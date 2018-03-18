@@ -25,7 +25,7 @@ public class Eweather {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-       URL url = new URL("http://api.openweathermap.org/data/2.5/group?id=264371,734077,8133690,8133786,261743&units=metric&appid=dad54c459600534e7967891651018385");
+     /*  URL url = new URL("http://api.openweathermap.org/data/2.5/group?id=264371,734077,8133690,8133786,261743&units=metric&appid=dad54c459600534e7967891651018385");
   try (InputStream is = url.openStream();
        JsonParser parser = Json.createParser(is)) {
       while (parser.hasNext()) {
@@ -45,7 +45,7 @@ public class Eweather {
              }
          }
      }
- }
+ }*/
         Mainmenu mm = new Mainmenu();
         mm.setVisible(true);
         // TODO code application logic here
