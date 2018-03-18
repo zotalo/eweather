@@ -34,22 +34,23 @@ public class OkairosTora extends javax.swing.JFrame {
         cityList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : cityQuery.getResultList();
         cityQuery1 = java.beans.Beans.isDesignTime() ? null : EweatherPUEntityManager.createQuery("SELECT c FROM City c");
         cityList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : cityQuery1.getResultList();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        weatherNowButton = new javax.swing.JButton();
+        refreshWeatherButton = new javax.swing.JButton();
+        returnToMainenuButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
+        oKairosToraTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Καιρός τώρα");
+        weatherNowButton.setText("Καιρός τώρα");
 
-        jButton2.setText("Αναννέωση καιρού");
+        refreshWeatherButton.setText("Αναννέωση καιρού");
 
-        jButton3.setText("Επιστροφή");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        returnToMainenuButton.setText("Επιστροφή");
+        returnToMainenuButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                returnToMainenuButtonMouseClicked(evt);
             }
         });
 
@@ -59,33 +60,45 @@ public class OkairosTora extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jList2);
 
+        oKairosToraTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        oKairosToraTitle.setText("Εμφάνιση καιρικών συνθηκών");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(77, 77, 77))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(140, 140, 140)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(weatherNowButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(refreshWeatherButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(returnToMainenuButton, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(189, 189, 189)
+                        .addComponent(oKairosToraTitle)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(oKairosToraTitle)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addGap(45, 45, 45)
+                        .addComponent(weatherNowButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
+                        .addComponent(refreshWeatherButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3)))
-                .addContainerGap(139, Short.MAX_VALUE))
+                        .addComponent(returnToMainenuButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(109, 109, 109))
         );
 
         bindingGroup.bind();
@@ -93,11 +106,11 @@ public class OkairosTora extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void returnToMainenuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnToMainenuButtonMouseClicked
         this.dispose();
         new Mainmenu.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_returnToMainenuButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -140,11 +153,12 @@ public class OkairosTora extends javax.swing.JFrame {
     private java.util.List<model.City> cityList1;
     private javax.persistence.Query cityQuery;
     private javax.persistence.Query cityQuery1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JList<String> jList2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel oKairosToraTitle;
+    private javax.swing.JButton refreshWeatherButton;
+    private javax.swing.JButton returnToMainenuButton;
+    private javax.swing.JButton weatherNowButton;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

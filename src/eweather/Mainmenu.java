@@ -27,33 +27,36 @@ public class Mainmenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        theWeatherNowButton = new javax.swing.JButton();
+        weatherForcastButton = new javax.swing.JButton();
+        statisticsButton = new javax.swing.JButton();
+        exitButton = new javax.swing.JButton();
+        mainMenuTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setText("Ο Καιρός Τώρα");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        theWeatherNowButton.setText("Ο Καιρός Τώρα");
+        theWeatherNowButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                theWeatherNowButtonMouseClicked(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        weatherForcastButton.setText("Πρόβλεψη Καιρού");
 
-        jButton3.setText("jButton3");
+        statisticsButton.setText("Στατιστικά");
 
-        jButton4.setText("EXIT");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        exitButton.setText("Έξοδος");
+        exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                exitButtonMouseClicked(evt);
             }
         });
 
-        jLabel1.setText("eWeather");
+        mainMenuTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mainMenuTitle.setText("e-Weather System");
+        mainMenuTitle.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,42 +67,44 @@ public class Mainmenu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1)))
+                            .addComponent(exitButton)
+                            .addComponent(statisticsButton)
+                            .addComponent(weatherForcastButton)
+                            .addComponent(theWeatherNowButton)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(163, 163, 163)
-                        .addComponent(jLabel1)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                        .addComponent(mainMenuTitle)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1)
+                .addComponent(mainMenuTitle)
                 .addGap(33, 33, 33)
-                .addComponent(jButton1)
+                .addComponent(theWeatherNowButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(weatherForcastButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(statisticsButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addComponent(exitButton)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
+
+        mainMenuTitle.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void theWeatherNowButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_theWeatherNowButtonMouseClicked
         
         new OkairosTora().setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_theWeatherNowButtonMouseClicked
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
     this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_exitButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -137,11 +142,11 @@ public class Mainmenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton exitButton;
+    private javax.swing.JLabel mainMenuTitle;
+    private javax.swing.JButton statisticsButton;
+    private javax.swing.JButton theWeatherNowButton;
+    private javax.swing.JButton weatherForcastButton;
     // End of variables declaration//GEN-END:variables
 
     static class setVisible {
