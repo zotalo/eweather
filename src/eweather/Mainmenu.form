@@ -77,6 +77,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7; &#x39a;&#x3b1;&#x3b9;&#x3c1;&#x3bf;&#x3cd;"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="weatherForcastButtonMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="statisticsButton">
       <Properties>
@@ -99,9 +102,6 @@
         <Property name="text" type="java.lang.String" value="e-Weather System"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
-      </AccessibilityProperties>
     </Component>
   </SubComponents>
 </Form>

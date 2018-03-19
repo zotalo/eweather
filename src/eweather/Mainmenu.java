@@ -44,6 +44,11 @@ public class Mainmenu extends javax.swing.JFrame {
         });
 
         weatherForcastButton.setText("Πρόβλεψη Καιρού");
+        weatherForcastButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                weatherForcastButtonMouseClicked(evt);
+            }
+        });
 
         statisticsButton.setText("Στατιστικά");
 
@@ -92,8 +97,6 @@ public class Mainmenu extends javax.swing.JFrame {
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        mainMenuTitle.getAccessibleContext().setAccessibleDescription("");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -105,6 +108,10 @@ public class Mainmenu extends javax.swing.JFrame {
     private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
     this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_exitButtonMouseClicked
+
+    private void weatherForcastButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_weatherForcastButtonMouseClicked
+        new WeatherForecast().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_weatherForcastButtonMouseClicked
 
     /**
      * @param args the command line arguments
