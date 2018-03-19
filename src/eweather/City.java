@@ -17,16 +17,21 @@ public class City {
     private int dt;
     private String name;
     private ArrayList<Weather> weathers;
+    private Main main;
     
-    
+    //constructors
     public City(){
         weathers=new ArrayList<>();
-        
     }
     public void addWeather(Weather w){
         weathers.add(w);
     }
-    
+    public City(int id,int dt,String name,float temp){
+        this.id=id;
+        this.dt=dt;
+        this.name=name;
+        main=new Main(temp);
+    }
     
     
     
