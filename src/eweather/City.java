@@ -29,7 +29,7 @@ public class City {
         //rains=new ArrayList<>();
         //snows=new ArrayList<>();
     }
-    public City(int id,int dt,String name,Main mains,Wind winds,Clouds cloud){
+    public City(int id,int dt,String name,Main main,Wind wind,Clouds cloud){
         this.id=id;
         this.dt=dt;
         this.name=name;
