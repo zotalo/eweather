@@ -103,6 +103,7 @@ public class Mainmenu extends javax.swing.JFrame {
     private void theWeatherNowButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_theWeatherNowButtonMouseClicked
         
         new OkairosTora().setVisible(true);// TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_theWeatherNowButtonMouseClicked
 
     private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
@@ -111,6 +112,7 @@ public class Mainmenu extends javax.swing.JFrame {
 
     private void weatherForcastButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_weatherForcastButtonMouseClicked
         new WeatherForecast().setVisible(true);        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_weatherForcastButtonMouseClicked
 
     /**
