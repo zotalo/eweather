@@ -21,31 +21,33 @@ public class City {
     private ArrayList<Snow> snows;
     private Main main;
     private Wind wind;
-    private Clouds clouds;
+    private Clouds cloud;
     
     //constructors
     public City(){
         weathers=new ArrayList<>();
-        rains=new ArrayList<>();
-        snows=new ArrayList<>();
+        //rains=new ArrayList<>();
+        //snows=new ArrayList<>();
     }
-    public City(int id,int dt,String name,float temp,float speed,int all){
+    public City(int id,int dt,String name,Main mains,Wind winds,Clouds cloud){
         this.id=id;
         this.dt=dt;
         this.name=name;
-        main=new Main(temp);
-        wind=new Wind(speed);
-        clouds=new Clouds(all);
+        this.main=main;
+        this.wind=wind;
+        this.cloud=cloud;
     }
     //add objects in array list
     public void addWeather(Weather w){
         weathers.add(w);
     }
+    /*
     public void addRain(Rain r){
         rains.add(r);
     }
     public void addSnow(Snow s){
         snows.add(s);
+    */
     }
      
     

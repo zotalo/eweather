@@ -109,8 +109,8 @@ public class OkairosTora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void returnToMainenuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnToMainenuButtonMouseClicked
+        new Mainmenu().setVisible(true);
         this.dispose();
-        new Mainmenu.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_returnToMainenuButtonMouseClicked
 
