@@ -31,53 +31,79 @@ public class WeatherForecast extends javax.swing.JFrame {
         EweatherPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("EweatherPU").createEntityManager();
         cityQuery = java.beans.Beans.isDesignTime() ? null : EweatherPUEntityManager.createQuery("SELECT c FROM City c");
         cityList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : cityQuery.getResultList();
-        jLabel1 = new javax.swing.JLabel();
+        forecastForCities = new javax.swing.JLabel();
         citiesComboBox = new javax.swing.JComboBox<>();
-        weatherForecastDay1 = new javax.swing.JButton();
+        weatherForecastDayOne = new javax.swing.JButton();
+        weatherForecastDaysFive = new javax.swing.JButton();
+        refreshWeatherForecast = new javax.swing.JButton();
+        returnToMainenouButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Πρόβλεψη για:");
+        forecastForCities.setText("Πρόβλεψη για:");
 
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cityList, citiesComboBox);
         bindingGroup.addBinding(jComboBoxBinding);
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cityList, org.jdesktop.beansbinding.ELProperty.create("${cityid}"), citiesComboBox, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
-        weatherForecastDay1.setText("Πρόβλεψη Καιρού 1ης ημέρας");
+        weatherForecastDayOne.setText("Πρόβλεψη Καιρού 1ας ημέρας");
+
+        weatherForecastDaysFive.setText("Πρόβλεψη Καιρού 5 ημερών");
+
+        refreshWeatherForecast.setText("Ανανέωση Πρόβλεψης Καιρού");
+
+        returnToMainenouButton.setText("Επιστροφή");
+        returnToMainenouButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                returnToMainenuMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(forecastForCities)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(citiesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(weatherForecastDay1)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                    .addComponent(returnToMainenouButton)
+                    .addComponent(refreshWeatherForecast)
+                    .addComponent(weatherForecastDaysFive)
+                    .addComponent(weatherForecastDayOne)
+                    .addComponent(citiesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(weatherForecastDay1)
-                .addGap(47, 47, 47)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(citiesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(144, Short.MAX_VALUE))
+                    .addComponent(forecastForCities, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(weatherForecastDayOne)
+                .addGap(18, 18, 18)
+                .addComponent(weatherForecastDaysFive)
+                .addGap(18, 18, 18)
+                .addComponent(refreshWeatherForecast)
+                .addGap(18, 18, 18)
+                .addComponent(returnToMainenouButton)
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void returnToMainenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnToMainenuMouseClicked
+        this.dispose();
+        new Mainmenu.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_returnToMainenuMouseClicked
 
     /**
      * @param args the command line arguments
@@ -119,8 +145,11 @@ public class WeatherForecast extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> citiesComboBox;
     private java.util.List<model.City> cityList;
     private javax.persistence.Query cityQuery;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton weatherForecastDay1;
+    private javax.swing.JLabel forecastForCities;
+    private javax.swing.JButton refreshWeatherForecast;
+    private javax.swing.JButton returnToMainenouButton;
+    private javax.swing.JButton weatherForecastDayOne;
+    private javax.swing.JButton weatherForecastDaysFive;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

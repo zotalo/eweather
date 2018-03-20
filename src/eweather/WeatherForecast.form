@@ -48,40 +48,44 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Component id="forecastForCities" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="citiesComboBox" min="-2" pref="106" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                      <Component id="weatherForecastDay1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="returnToMainenouButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="refreshWeatherForecast" min="-2" max="-2" attributes="0"/>
+                  <Component id="weatherForecastDaysFive" min="-2" max="-2" attributes="0"/>
+                  <Component id="weatherForecastDayOne" min="-2" max="-2" attributes="0"/>
+                  <Component id="citiesComboBox" min="-2" pref="106" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="122" max="32767" attributes="0"/>
+              <EmptySpace pref="88" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-              <Component id="weatherForecastDay1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="citiesComboBox" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" max="32767" attributes="0"/>
+                  <Component id="forecastForCities" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="144" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="weatherForecastDayOne" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="weatherForecastDaysFive" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="refreshWeatherForecast" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="returnToMainenouButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="forecastForCities">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7; &#x3b3;&#x3b9;&#x3b1;:"/>
       </Properties>
@@ -95,10 +99,28 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="weatherForecastDay1">
+    <Component class="javax.swing.JButton" name="weatherForecastDayOne">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7; &#x39a;&#x3b1;&#x3b9;&#x3c1;&#x3bf;&#x3cd; 1&#x3b7;&#x3c2;&#xa0;&#x3b7;&#x3bc;&#x3ad;&#x3c1;&#x3b1;&#x3c2;"/>
+        <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7; &#x39a;&#x3b1;&#x3b9;&#x3c1;&#x3bf;&#x3cd; 1&#x3b1;&#x3c2; &#x3b7;&#x3bc;&#x3ad;&#x3c1;&#x3b1;&#x3c2;"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="weatherForecastDaysFive">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7; &#x39a;&#x3b1;&#x3b9;&#x3c1;&#x3bf;&#x3cd; 5 &#x3b7;&#x3bc;&#x3b5;&#x3c1;&#x3ce;&#x3bd;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="refreshWeatherForecast">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x391;&#x3bd;&#x3b1;&#x3bd;&#x3ad;&#x3c9;&#x3c3;&#x3b7; &#x3a0;&#x3c1;&#x3cc;&#x3b2;&#x3bb;&#x3b5;&#x3c8;&#x3b7;&#x3c2; &#x39a;&#x3b1;&#x3b9;&#x3c1;&#x3bf;&#x3cd;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="returnToMainenouButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x395;&#x3c0;&#x3b9;&#x3c3;&#x3c4;&#x3c1;&#x3bf;&#x3c6;&#x3ae;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="returnToMainenuMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
