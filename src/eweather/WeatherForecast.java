@@ -101,7 +101,7 @@ public class WeatherForecast extends javax.swing.JFrame {
 
     private void returnToMainenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnToMainenuMouseClicked
         this.dispose();
-        new Mainmenu.setVisible(true);
+        new Mainmenu().setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_returnToMainenuMouseClicked
 
@@ -134,6 +134,7 @@ public class WeatherForecast extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new WeatherForecast().setVisible(true);
             }

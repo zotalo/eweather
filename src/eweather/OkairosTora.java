@@ -57,6 +57,8 @@ public class OkairosTora extends javax.swing.JFrame {
         org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cityList1, jList2);
         jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create("${cityname}"));
         bindingGroup.addBinding(jListBinding);
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, cityList, org.jdesktop.beansbinding.ELProperty.create("${cityid}"), jList2, org.jdesktop.beansbinding.BeanProperty.create("selectedElement"));
+        bindingGroup.addBinding(binding);
 
         jScrollPane2.setViewportView(jList2);
 

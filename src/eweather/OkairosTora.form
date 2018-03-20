@@ -142,6 +142,9 @@
             <BindingProperty name="elements" source="cityList1" target="jList2" targetPath="elements" updateStrategy="0" immediately="false">
               <BindingParameter name="DISPLAY" value="${cityname}"/>
             </BindingProperty>
+            <BindingProperty name="selectedElement" source="cityList" sourcePath="${cityid}" target="jList2" targetPath="selectedElement" updateStrategy="0" immediately="false">
+              <BindingParameter name="IGNORE_ADJUSTING" value="N"/>
+            </BindingProperty>
           </BindingProperties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
