@@ -11,17 +11,17 @@ package eweather;
  */
 public class Rain {
     
-    private float threeHours;
+    private float mmRain;
     
     //constructor
-    public Rain(float threeHours){
-        this.threeHours=threeHours;
+    public Rain(float mmRain){
+        this.mmRain=mmRain;
     }
     
-    public float getThreeHours(){
-        return threeHours;
+    public float getMmRain(){
+        return mmRain;
     }
-    public void setThreeHours(float threeHours){
-        this.threeHours=threeHours;
+    public void setMmRain(float mmRain){
+        this.mmRain=mmRain;
     }
 }
