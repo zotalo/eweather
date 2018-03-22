@@ -53,9 +53,9 @@ public class Mainmenu extends javax.swing.JFrame {
         statisticsButton.setText("Στατιστικά");
 
         exitButton.setText("Έξοδος");
-        exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exitButtonMouseClicked(evt);
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
             }
         });
 
@@ -106,14 +106,15 @@ public class Mainmenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_theWeatherNowButtonMouseClicked
 
-    private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
-    this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_exitButtonMouseClicked
-
     private void weatherForcastButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_weatherForcastButtonMouseClicked
         new WeatherForecast().setVisible(true);        // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_weatherForcastButtonMouseClicked
+
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitButtonActionPerformed
 
     /**
      * @param args the command line arguments
