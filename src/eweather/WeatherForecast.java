@@ -145,7 +145,7 @@ public class WeatherForecast extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.persistence.EntityManager EweatherPUEntityManager;
     private javax.swing.JComboBox<String> citiesComboBox;
-    private java.util.List<model.City> cityList;
+    private java.util.List<entities.City> cityList;
     private javax.persistence.Query cityQuery;
     private javax.swing.JLabel forecastForCities;
     private javax.swing.JButton refreshWeatherForecast;

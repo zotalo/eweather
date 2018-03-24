@@ -5,23 +5,22 @@
  */
 package eweather;
 
+import java.io.Serializable;
+
 /**
  *
  * @author stmor
  */
-public class Rain {
+public class Rain implements Serializable {
     
     private float mmRain;
     
-    //constructor
-    public Rain(float mmRain){
-        this.mmRain=mmRain;
-    }
-    
-    public float getMmRain(){
+    public float getMmRain() {
         return mmRain;
     }
-    public void setMmRain(float mmRain){
-        this.mmRain=mmRain;
+
+    public void setMmRain(float mmRain) {
+        this.mmRain = mmRain;
     }
+    
 }

@@ -3,25 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package eweather;
+package currentweather;
+
+import java.io.Serializable;
 
 /**
  *
  * @author stmor
  */
-public class Clouds {
+public class CloudsInfo implements Serializable {
     
     private int all;
+
     
-    public Clouds(int all){
-        this.all=all;
-    }
     
-    public int getAll(){
-        return all;    
+    public int getAll() {
+        return all;
     }
-    
-    public void setAll(int all){
-        this.all=all;
+
+    public void setAll(int all) {
+        this.all = all;
     }
+
+   
 }

@@ -5,24 +5,22 @@
  */
 package eweather;
 
+import java.io.Serializable;
+
 /**
  *
  * @author stmor
  */
-public class Snow {
+public class Snow implements Serializable {
     
     private float mmSnow;
-    
-    //constructor
-    public Snow(float mmSnow){
-        this.mmSnow=mmSnow;
-    }
-    
-    public float getMmSnow(){
+
+    public float getMmSnow() {
         return mmSnow;
     }
-    public void setMmSnow(float mmSnow){
-        this.mmSnow=mmSnow;
+
+    public void setMmSnow(float mmSnow) {
+        this.mmSnow = mmSnow;
     }
     
 }

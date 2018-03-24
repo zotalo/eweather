@@ -152,8 +152,8 @@ public class OkairosTora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.persistence.EntityManager EweatherPUEntityManager;
-    private java.util.List<model.City> cityList;
-    private java.util.List<model.City> cityList1;
+    private java.util.List<entities.City> cityList;
+    private java.util.List<entities.City> cityList1;
     private javax.persistence.Query cityQuery;
     private javax.persistence.Query cityQuery1;
     private javax.swing.JList<String> jList2;
