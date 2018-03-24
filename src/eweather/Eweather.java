@@ -18,6 +18,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import utils.TempUtils;
+import forecast.info.*;
 /*
  * @author George Siorokos <georgios.siorokos at gmail.com>
  */
@@ -40,9 +41,26 @@ public class Eweather {
             cityIds.add("8133786");
             cityIds.add("261743");
             String json = util.getWeatherForCities(url, apiKey, cityIds);
-            ObjectMapper mapper = new ObjectMapper();
-            JsonStructure jsonStructure = mapper.readValue(json, JsonStructure.class);
+  //          ObjectMapper mapper = new ObjectMapper();
+  //          JsonStructure jsonStructure = mapper.readValue(json, JsonStructure.class);
             
+            for(String cityCode : Arrays.asList("264371", "734077", "8133690", "8133786", "261743")) {
+   String jsonForecast = util.getWeatherForCities("http://api.openweathermap.org/data/2.5/forecast", 
+     "2c48c02c54482ea955d6414942572809", Arrays.asList(cityCode));
+   
+   ObjectMapper mapperForecast = new ObjectMapper();
+  ForecastInfo forecastInfo = mapperForecast.readValue(jsonForecast, ForecastInfo.class);
+   
+   //new ForecastToCityMapper().apply(forecastInfo); 
+   
+   System.out.println("test");
+   
+   //service.save(city);
+  }
+            
+            
+            ObjectMapper mapperForecast = new ObjectMapper();
+            ForecastInfo forecastInfo = mapperForecast.readValue(jsonForecast, ForecastInfo.class);
             int cityId=10;
             int cityDt=10;
             String cityName="Stavros";
