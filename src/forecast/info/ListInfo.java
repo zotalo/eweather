@@ -2,9 +2,9 @@ package forecast.info;
 
 import java.util.List;
 
-import currentweather.CloudsInfo;
-import currentweather.WeatherInfo;
-import currentweather.WindInfo;
+import weather.info.CloudsInfo;
+import weather.info.WeatherInfo;
+import weather.info.WindInfo;
 
 public class ListInfo {
 

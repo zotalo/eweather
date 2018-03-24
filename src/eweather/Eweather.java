@@ -19,6 +19,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import utils.TempUtils;
 import forecast.info.*;
+import java.util.Arrays;
 /*
  * @author George Siorokos <georgios.siorokos at gmail.com>
  */
@@ -59,8 +60,8 @@ public class Eweather {
   }
             
             
-            ObjectMapper mapperForecast = new ObjectMapper();
-            ForecastInfo forecastInfo = mapperForecast.readValue(jsonForecast, ForecastInfo.class);
+//            ObjectMapper mapperForecast = new ObjectMapper();
+//            ForecastInfo forecastInfo = mapperForecast.readValue(jsonForecast, ForecastInfo.class);
             int cityId=10;
             int cityDt=10;
             String cityName="Stavros";

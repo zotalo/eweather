@@ -1,6 +1,6 @@
 package forecast.info;
 
-import currentweather.CoordInfo;
+import weather.info.CoordInfo;
 
 public class CityInfo {
 
