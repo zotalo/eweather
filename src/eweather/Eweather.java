@@ -42,8 +42,8 @@ public class Eweather {
             cityIds.add("8133786");
             cityIds.add("261743");
             String json = util.getWeatherForCities(url, apiKey, cityIds);
-  //          ObjectMapper mapper = new ObjectMapper();
-  //          JsonStructure jsonStructure = mapper.readValue(json, JsonStructure.class);
+//            ObjectMapper mapper = new ObjectMapper();
+//            JsonStructure jsonStructure = mapper.readValue(json, JsonStructure.class);
             
             for(String cityCode : Arrays.asList("264371", "734077", "8133690", "8133786", "261743")) {
    String jsonForecast = util.getWeatherForCities("http://api.openweathermap.org/data/2.5/forecast", 
@@ -62,39 +62,6 @@ public class Eweather {
             
 //            ObjectMapper mapperForecast = new ObjectMapper();
 //            ForecastInfo forecastInfo = mapperForecast.readValue(jsonForecast, ForecastInfo.class);
-            int cityId=10;
-            int cityDt=10;
-            String cityName="Stavros";
-            float cityMainTemp=10.15f;
-            float cityWindSpeed=18.19f;
-            int cityCloudsAll=68;
-            float cityRainMmRain=0.16f;
-            float citySnowMmSnow=0.75f;
-            String cityWeatherDescr="Κατά τόπους χιόνι";
-            //List<Weather> weathers = new ArrayList<>();
-            String neoJsonWeatherKid="Xalase o kairos";
-//            City newCity= new City(cityId, cityDt, cityName, cityMainTemp, cityWindSpeed, cityCloudsAll, cityRainMmRain, citySnowMmSnow, cityWeatherDescr);
-//            for (int i=0; i<5; i++){
-//                newCity.BuildWeath(newCity.getWeathers().size(), neoJsonWeatherKid);
-//            }
-            //City newWeath = null;
-            //newWeath.BuildWeath(cityWeatherDescr);
-            //Weather weatherAdd=new Weather("xoxoxoxo");
-            //weathers.add(weatherAdd);
-//            System.out.println("Id πόλης : "+newCity.getId());
-//            System.out.println("Dt πόλης : "+newCity.getDt());
-//            System.out.println("Όνομα πόλης : "+newCity.getName());
-//            //newCity.setMainTemp(88.98f);
-//            System.out.println("Θερμοκρασία πόλης : "+newCity.getMain().getTemp());
-//            System.out.println("Άνεμος πόλης : "+newCity.getWind().getSpeed());
-//            System.out.println("Βροχή πόλης : "+newCity.getRain().getMmRain());
-//            System.out.println("Χιόνι πόλης : "+newCity.getSnow().getMmSnow());
-//            for (int i=0; i<newCity.getWeathers().size(); i++){
-//
-//                System.out.println("Περιγραφή καιρού στην θέση λίστας Weather : "+(newCity.getWeathers().get(i).getCnt()+1)+" είναι "+newCity.getWeathers().get(i).getDescription());
-//            }
-           // System.out.println("Περιγραφή καιρού vol 2 : "+newWeath.getWeathers().get(1).getDescription());
-
 
 
         try{

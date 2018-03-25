@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class CoordInfo implements Serializable{
     private float lon;
     private float lat;
-
+    
     public float getLon() {
         return lon;
     }

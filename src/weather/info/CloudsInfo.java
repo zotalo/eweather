@@ -15,7 +15,7 @@ public class CloudsInfo implements Serializable {
     
     private int all;
 
-    
+   
     
     public int getAll() {
         return all;

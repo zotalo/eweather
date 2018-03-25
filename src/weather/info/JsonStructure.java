@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class JsonStructure implements Serializable {
     private int cnt;
     private List<weather.info.ListInfo> list;
-    
+
 
     public int getCnt() {
         return cnt;
